@@ -1,75 +1,50 @@
 ---
-layout: default
+layout: docs
 title: "Overview - Developer Docs"
-body_class: left-sidebar
+subtitle: Overview
+subtitle2: Developer Docs
 permalink: /docs/features/
 ---
-	<!-- Main -->
-	<div id="page" class="container">	
-		<!-- Main Heading -->
-		<div class="title-heading">
-			<h2>Overview</h2>
-			<p>Developer Docs</p>
-		</div>
-		
-		<!-- Main Content -->
-		<div id="main">
-			<div class="row">
-				<!-- Sidebar -->
-				<div id="sidebar" class="4u 12u(narrower)">
-{% include sidebar.html %}
-				</div>
-				<!-- Content -->
-				<div id="content" class="8u 12u(narrower) important(narrower)">
-					<article>
 {% comment %}
-						<header>
-							<h2>What magic is this?</h2>
-						</header>
+<header>
+	<h2>What magic is this?</h2>
+</header>
 {% endcomment %}
 <div class="well">
 	<p>You are writing a mobile or web application that needs just a little bit of a backend. Maybe you want to access <a href="https://flybase.io">Flybase</a>, or MongoDB, process a Stripe payment, github webhook, send an SMS, or an e-mail. Do you really need to host your own Node.js service to run this small snippet of backend logic?</p>
 	<p>Meet Joined Node, We make it easier to securely execute node.js powered tasks directly from a mobile or web application. You don’t need a backend to run backend code.</p>
 </div>
 
-						<p>Sometimes, an app needs a full backend system, and sometimes, it just needs a single, secure endpoint that you can call and have it perform a task.</p>
-						
-						<p>Maybe you want to send an SMS message or an email, or maybe you want to save data in a database?</p>
-						
-						<p>You could set up a full client / server setup for this, but is that really necessary?</p>
-						
-						<h4>Meet Joined Node</h4>
+<p>Sometimes, an app needs a full backend system, and sometimes, it just needs a single, secure endpoint that you can call and have it perform a task.</p>
 
-						<p>At the heart of <strong>Joined Node</strong>, are <em>Tasks</em>, a <em>Task</em> is a snippet of code that can be called using a simple HTTP request, either directly in a browser or anywhere else. These Tasks can be very simple, or they can be extended as much as you wish. Their major benefits include:</p>
+<p>Maybe you want to send an SMS message or an email, or maybe you want to save data in a database?</p>
 
-						<ul>
-							<li><i class="fa fa-check"></i> Ease of use. No complicated setup, just code.</li>
-							<li><i class="fa fa-check"></i> Vastly simplifies / eliminates the need for backend code, boiling it down into reusable, functional pieces.</li>
-							<li><i class="fa fa-check"></i> Tamper proof (uses JSON webtokens behind the scenes), and encrypted where they need to be.</li>
-						</ul>
+<p>You could set up a full client / server setup for this, but is that really necessary?</p>
 
-						<p>Joined Node brings you a whole new way to build your code, rather than the traditional, process of setting up servers, building out a full backend, you can instead focus on the frontend and use Joined Node to handle your backend work. All code is executed securely in a containerized sandbox environment, and our quick IDE lets you rapidly build out tasks, allowing you to integrate cleanly with single page web applications, mobile apps, straight HTML apps, etc.</p>
-						
-						<p>Joined Node Tasks can be used for...</p>
-						<ul>
-							<li><span class="icon fa-laptop"></span> <strong>Backendless Applications</strong>: Run server-side code for your JavaScript and native applications.</li>
-							<li><span class="icon fa-cog"></span> <strong>Programmable Webhooks</strong>: Run code on each Stripe Payment, a GitHub Push, or any webhook, without setting up servers.</li>
-							<li><span class="icon fa-bar-chart-o"></span> <strong>Multi Tenant Sandbox</strong>: Allow your customers to extend your product using Node.js code instead of creating your own scripting language.</li>
-							<li><span class="icon fa-laptop"></span> <strong>Microservices</strong>: Each node.js task serves a singular purpose, giving you true microservices hosting.</li>
-						</ul>							
-						
-						<p>With Joined Node, we're recreating how you build your apps, rather than building huge monolithic backend services, you can focus on building singular Tasks that do one purpose, for example you want to send an email, just trigger a post to a task that sends an email with the information included, or if you want to send an SMS message, you can do the same.</p>
-						<p>This lets you securely, and rapidly build your apps</p>
-						<p>
+<h4>Meet Joined Node</h4>
+
+<p>At the heart of <strong>Joined Node</strong>, are <em>Tasks</em>, a <em>Task</em> is a snippet of code that can be called using a simple HTTP request, either directly in a browser or anywhere else. These Tasks can be very simple, or they can be extended as much as you wish. Their major benefits include:</p>
+
+<ul>
+	<li><i class="fa fa-check"></i> Ease of use. No complicated setup, just code.</li>
+	<li><i class="fa fa-check"></i> Vastly simplifies / eliminates the need for backend code, boiling it down into reusable, functional pieces.</li>
+	<li><i class="fa fa-check"></i> Tamper proof (uses JSON webtokens behind the scenes), and encrypted where they need to be.</li>
+</ul>
+
+<p>Joined Node brings you a whole new way to build your code, rather than the traditional, process of setting up servers, building out a full backend, you can instead focus on the frontend and use Joined Node to handle your backend work. All code is executed securely in a containerized sandbox environment, and our quick IDE lets you rapidly build out tasks, allowing you to integrate cleanly with single page web applications, mobile apps, straight HTML apps, etc.</p>
+
+<p>Joined Node Tasks can be used for...</p>
+<ul>
+	<li><span class="icon fa-laptop"></span> <strong>Backendless Applications</strong>: Run server-side code for your JavaScript and native applications.</li>
+	<li><span class="icon fa-cog"></span> <strong>Programmable Webhooks</strong>: Run code on each Stripe Payment, a GitHub Push, or any webhook, without setting up servers.</li>
+	<li><span class="icon fa-bar-chart-o"></span> <strong>Multi Tenant Sandbox</strong>: Allow your customers to extend your product using Node.js code instead of creating your own scripting language.</li>
+	<li><span class="icon fa-laptop"></span> <strong>Microservices</strong>: Each node.js task serves a singular purpose, giving you true microservices hosting.</li>
+</ul>							
+
+<p>With Joined Node, we're recreating how you build your apps, rather than building huge monolithic backend services, you can focus on building singular Tasks that do one purpose, for example you want to send an email, just trigger a post to a task that sends an email with the information included, or if you want to send an SMS message, you can do the same.</p>
+<p>This lets you securely, and rapidly build your apps</p>
+<p>
 {% comment %}
-						<a href="https://app.joinednode.com/signup" class="button big alt">Try it now</a>
+	<a href="https://app.joinednode.com/signup" class="button big alt">Try it now</a>
 {% endcomment %}
-						</p>
-					</article>
-				</div>
-			</div>
-		</div>
-		<!-- Main Content -->
-	</div>
-	<!-- Main -->
-</div>
+</p>

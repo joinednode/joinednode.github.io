@@ -1,6 +1,6 @@
 ---
 layout: default
-body_class: no-sidebar
+body_class: left-sidebar
 ---
 <!-- Main -->
 <div id="page" class="container">	
@@ -13,8 +13,12 @@ body_class: no-sidebar
 	<!-- Main Content -->
 	<div id="main">
 		<div class="row">
+			<!-- Sidebar -->
+			<div id="sidebar" class="4u 12u(narrower)">
+{% include sidebar.html %}
+			</div>
 			<!-- Content -->
-			<div id="content" class="12u">
+			<div id="content" class="8u 12u(narrower) important(narrower)">
 				<article>
 {% if page.subheader %}
 					<header>

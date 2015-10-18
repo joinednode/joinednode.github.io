@@ -1,30 +1,11 @@
 ---
-layout: default
+layout: docs
 title: "Programming Model - Developer Docs"
-body_class: left-sidebar
+subheader: The Joined Node Programming Model
+subtitle: Programming Model
+subtitle2: Developer Docs
 permalink: /docs/model/
 ---
-	<!-- Main -->
-	<div id="page" class="container">	
-		<!-- Main Heading -->
-		<div class="title-heading">
-			<h2>Programming Model</h2>
-			<p>Developer Docs</p>
-		</div>
-		
-		<!-- Main Content -->
-		<div id="main">
-			<div class="row">
-				<!-- Sidebar -->
-				<div id="sidebar" class="4u 12u(narrower)">
-{% include sidebar.html %}
-				</div>
-				<!-- Content -->
-				<div id="content" class="8u 12u(narrower) important(narrower)">
-					<article>
-						<header>
-							<h2>The Joined Node Programming Model</h2>
-						</header>
 <p>We want Joined Node Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.</p>
 
 <h3>1. Function with callback</h3>
@@ -89,12 +70,3 @@ return function (context, req, res) {
 <p>The <code>context</code> argument behaves the same way as in the two simpler programming models. Note that this programming model does not have a concept of a callback. Ending the HTTP response indicates completion.</p>
 
 <p>Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.</p>
-					</article>
-				</div>
-				
-			</div>
-		</div>
-		<!-- Main Content -->
-	</div>
-	<!-- Main -->
-</div>
