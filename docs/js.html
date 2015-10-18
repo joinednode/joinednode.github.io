@@ -1,0 +1,146 @@
+---
+layout: default
+title: "Javascript Library - Developer Docs"
+body_class: left-sidebar
+permalink: /docs/js/
+---
+	<!-- Main -->
+	<div id="page" class="container">	
+		<!-- Main Heading -->
+		<div class="title-heading">
+			<h2>Javascript Library</h2>
+			<p>Developer Docs</p>
+		</div>
+		
+		<!-- Main Content -->
+		<div id="main">
+			<div class="row">
+				<!-- Sidebar -->
+				<div id="sidebar" class="4u 12u(narrower)">
+{% include sidebar.html %}
+				</div>
+				<!-- Content -->
+				<div id="content" class="8u 12u(narrower) important(narrower)">
+					<article>
+						<header>
+							<h2>Javascript Library</h2>
+						</header>
+
+<p>You can call your Joined Node Tasks easily with a single HTTP call, or using other libraries to send the request, but we've also made it easy to use it with your JavaScript apps using our library.</p>
+
+<p>Use the <a href="https://github.com/joinednode/joinednode-js">JoinedNode JavaScript Library</a> to call your Joined Node Tasks from the browser using a require-like pattern. Run node.js code without a backend. </p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+var joinednode = require('joinednode')('&lt;your-joinednode-container>');
+joinednode('&lt;your-joinednode-app>').then(function(result) {
+	console.log(result);
+});
+</code></pre><br />
+
+<h3>Install</h3>
+
+<p>From <A href="https://npmjs.org">npm</A>:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs bash">
+npm install joinednode
+</code></pre><br />
+
+<p>Or our CDN:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+&lt;script src="https://cdn.joinednode.com/joinednode.min.js">&lt;/script>
+</code></pre><br />
+
+<h3>Usage</h3>
+
+<p>If you haven't created a Joined Node account yet, you can create one now</p>
+
+<p>Once created, every task is callable by using your <code>unique container id</code> and the task's <code>unique id</code>. This is how you call it:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+var joinednode = new joinednode('&lt;your-joinednode-container>');
+joinednode('&lt;your-joinednode-app>').then(function(result) {
+	console.log(result);
+});
+</code></pre><br />
+
+<p>Or from a node.js app:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+var joinednode = require('joinednode')('&lt;your-joinednode-container>');
+joinednode('&lt;your-joinednode-app>').then(function(result) {
+	console.log(result);
+});
+</code></pre><br />
+
+<h4>Sending parameters</h4>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+var joinednode = require('joinednode-require')('&lt;your-joinednode-container>');
+joinednode('&lt;your-joinednode-app>', {foo: 'bar'}).then(function(result) {
+	console.log(result);
+});
+</code></pre><br />
+
+<h4>Specifying an HTTP method</h4>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+joinednode.get('&lt;your-joinednode-app>');
+joinednode.post('&lt;your-joinednode-app>', { foo: 'bar' });
+joinednode.patch('&lt;your-joinednode-app>', { foo: 'bar' });
+joinednode.put('&lt;your-joinednode-app>', { foo: 'bar' });
+joinednode.del('&lt;your-joinednode-app>');
+</code></pre><br />
+
+
+					</article>
+				</div>
+				
+			</div>
+		</div>
+		<!-- Main Content -->
+	</div>
+	<!-- Main -->
+</div>

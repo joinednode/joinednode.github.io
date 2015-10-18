@@ -1,0 +1,100 @@
+---
+layout: default
+title: "Programming Model - Developer Docs"
+body_class: left-sidebar
+permalink: /docs/model/
+---
+	<!-- Main -->
+	<div id="page" class="container">	
+		<!-- Main Heading -->
+		<div class="title-heading">
+			<h2>Programming Model</h2>
+			<p>Developer Docs</p>
+		</div>
+		
+		<!-- Main Content -->
+		<div id="main">
+			<div class="row">
+				<!-- Sidebar -->
+				<div id="sidebar" class="4u 12u(narrower)">
+{% include sidebar.html %}
+				</div>
+				<!-- Content -->
+				<div id="content" class="8u 12u(narrower) important(narrower)">
+					<article>
+						<header>
+							<h2>The Joined Node Programming Model</h2>
+						</header>
+<p>We want Joined Node Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.</p>
+
+<h3>1. Function with callback</h3>
+
+<p>In the simplest mechanism, you must provide JavaScript code that returns a function which accepts a single argument: a callback. To indicate completion, the function must call the callback with two arguments: an error, and the result.</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>hello.js</span>
+</div>	
+<pre><code class="hljs javascript">
+return function(callback) {
+	calback(null, { i_am: 'done '});
+}
+</code></pre><br />
+
+<p>When the <code>callback</code> is invoked, the result value or an error will be serialized as JSON and sent back to the caller as application/json content type.</p>
+
+<h3>2. Function with context</h3>
+
+<p>A slightly more advanced version of the programming model allows you to return a function that accepts two arguments: a <code>context</code> and a <code>callback</code>.</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>hello.js</span>
+</div>	
+<pre><code class="hljs javascript">
+return function(context, callback) {
+	callback(null, { hello: context.data.name || 'Anonymous' });
+}
+</code></pre><br />
+
+<p>The <code>context</code> parameter is a JavaScript object with data and optionally body properties.</p>
+
+<p>The <code>context.data</code> is a JavaScript object that combines parameters passed to the code via GET.</p>
+
+<p>The <code>context.method</code> is a JavaScript variable that tells you what method was used, GET or POST.</p>
+
+<p>The <code>context.body</code> is JavaScript representation of a parsed <code>application/json</code> or <code>application/x-www-form-urlencoded</code> request body. It is only present for requests with bodies such as a POST.</p>
+
+<h3>3. Full HTTP control</h3>
+
+<p>The most flexible programming model allows you to take full control over the HTTP request and response.</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>hello.js</span>
+</div>	
+<pre><code class="hljs javascript">
+return function (context, req, res) {
+	res.writeHead(200, { 'Content-Type': 'text/html '});
+	res.end('&lt;h1>Hello, world!&lt;/h1>');
+}
+</code></pre><br />
+
+<p>The <code>context</code> argument behaves the same way as in the two simpler programming models. Note that this programming model does not have a concept of a callback. Ending the HTTP response indicates completion.</p>
+
+<p>Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.</p>
+					</article>
+				</div>
+				
+			</div>
+		</div>
+		<!-- Main Content -->
+	</div>
+	<!-- Main -->
+</div>

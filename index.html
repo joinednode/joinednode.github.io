@@ -1,23 +1,118 @@
 ---
 layout: default
+title: Home
+body_class: homepage
 ---
+		<!-- Main -->
+		<div id="banner-wrapper">
+			<section id="banner" class="container">
+				<div class="row">
+					<div id="content" class="12u">
+						<img src="/assets/joinednode.png" style="max-width: 15em;width: 90%;padding: 0.5em;" />
+						<header class="need">
+							<h2>Forget the backend</h2>
+							<p>No provisioning. No deployment. No sweat.</p>
+						</header>
+						<div class="window-toolbar">
+<i class="fa fa-circle red"></i>
+<i class="fa fa-circle orange"></i>
+<i class="fa fa-circle green"></i>
+<span>hello.js</span>
+						</div>	
+						<pre><code class="hljs javascript">
+module.exports = function (callback) {
+	callback(null, 'hello from Joined Node!');
+}
+						</code></pre>
+						<br />
+						<div class="window-toolbar">
+<i class="fa fa-circle red"></i>
+<i class="fa fa-circle orange"></i>
+<i class="fa fa-circle green"></i>
+<span>bash</span>
+						</div>
+						<pre><code class="hljs bash">
+$ curl https://api.joinednode.com/run/jn-container-52/hello
 
-<div class="home">
+"hello from Joined Node!"
+						</code></pre>		
+<br />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div id="featured-wrapper">
+		<section id="featured" class="container">
+			<div class="title"><span>Use Joined Node For...</span></div>
+			<div class="row">
+				<div class="12u 12u(narrower)">
+					<ul class="pennants">
+						<li>
+							<a href="#" class="pennant"><span class="icon fa-laptop"></span></a>
+							<header>
+								<h3><strong>Building</strong> Backendless Apps</h3>
+							</header>
+							<p>Focus on the frontend of your web or mobile applications, let us handle the server-side.</p>
+						</li>
+						<li>
+							<a href="#" class="pennant"><span class="icon fa-cog"></span></a>
+							<header>
+								<h3><strong>Creating</strong> Programmable Webhooks</h3>
+							</header>
+							<p>Run a task on each Stripe Payment, GitHub Push, Twilio message, email received, or any type of webhook, without setting up a single server.</p>
+						</li>
+						<li>
+							<a href="#" class="pennant"><span class="icon fa-bar-chart-o"></span></a>
+							<header>
+								<h3><strong>Multi</strong> Tenant Sandbox</h3>
+							</header>
+							<p>Allow your customers to extend your product using <strong>Node.js code</strong></p>
+						</li>
+						<li>
+							<a href="#" class="pennant"><span class="icon fa-laptop"></span></a>
+							<header>
+								<h3><strong>Microservices</strong> All the Way</h3>
+							</header>
+							<p>Each node.js task serves a singular purpose, giving you true microservices hosting.</p>
+						</li>
+					</ul>
+					<footer class="aligncenter">
+						<a href="/docs" class="button big">Learn More</a>&nbsp;
+						<a href="#" class="button big">Try it now</a>
+					</footer>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div id="second-wrapper">
+			<section id="second" class="container">
+			<div class="title"><span>About Joined Node</span></div>
+				<div class="row">
 
-  <h1 class="page-heading">Posts</h1>
+					<div class="12u 12u(narrower)">
+						<p>
+At the heart of <strong>Joined Node</strong>, are <em>Tasks</em>, a <em>Task</em> is a snippet of code that can be called using a simple HTTP request, either directly in a browser or anywhere else. These Tasks can be very simple, or they can be extended as much as you wish. Their major benefits include:
+						</p>
+<ul>
+	<li><i class="fa fa-check"></i> Ease of use. No complicated setup, just code.</li>
+	<li><i class="fa fa-check"></i> Vastly simplifies / eliminates the need for backend code, boiling it down into reusable, functional pieces.</li>
+	<li><i class="fa fa-check"></i> Tamper proof (uses JSON webtokens behind the scenes), and encrypted where they need to be.</li>
+</ul>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<p>With <strong>Joined Node</strong>, you get a simple, lightweight, and secure way of running isolated backend code that <em>removes</em> or <em>reduces</em> the need for a backend.</p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<p>It is a secure and cost efficient solution to the difficult challenge of supporting <strong>extensibility through custom code in multi-tenant systems</strong>.</p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<p>It is an ideal companion for <strong>mobile or single page applications that need just a little bit of a backend</strong>.</p>
 
-</div>
+<p>Finally, Joined Node tasks are a flexible and lightweight mechanism that supports a variety of <strong>integration scenarios</strong>.</p>
+
+<p>The Joined Node service was created and is supported by <a href="http://flybase.io">Flybase</a>. In fact, we are using Joined Node internally as a key element of our real-time app backend platform.</p>
+						<footer class="aligncenter">
+							<a href="/docs" class="button">Learn More</a>
+						</footer>
+					</div>
+				</div>
+			</section>
+	</div>

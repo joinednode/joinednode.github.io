@@ -1,0 +1,52 @@
+---
+layout: default
+title: "Query string parameters - Developer Docs"
+body_class: left-sidebar
+permalink: /docs/parameters/
+---
+	<!-- Main -->
+	<div id="page" class="container">	
+		<!-- Main Heading -->
+		<div class="title-heading">
+			<h2>Query string parameters</h2>
+			<p>Developer Docs</p>
+		</div>
+		
+		<!-- Main Content -->
+		<div id="main">
+			<div class="row">
+				<!-- Sidebar -->
+				<div id="sidebar" class="4u 12u(narrower)">
+{% include sidebar.html %}
+				</div>
+				<!-- Content -->
+				<div id="content" class="8u 12u(narrower) important(narrower)">
+					<article>
+						<header>
+							<h2>Query string parameters</h2>
+						</header>
+<p>You can pass paramaters to your code using URL query string of the request. All URL query parameters will be propagated to the task when it runs.</p>
+<p>To take advantage of this feature, define your JavaScript function such that it accepts two arguments instead of one: the <code>context</code> and the <code>callback</code>:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>hello.js</span>
+</div>	
+<pre><code class="hljs javascript">
+module.exports = function(context, callback) { 
+	callback(null, {message: "Hello " + context.data.who + '!' }); 
+}
+</code></pre>
+
+<p>All allowed URL query parameters of the request will be provided to the code in the form of <code>context.data</code> JavaScript object.</p>
+					</article>
+				</div>
+				
+			</div>
+		</div>
+		<!-- Main Content -->
+	</div>
+	<!-- Main -->
+</div>
