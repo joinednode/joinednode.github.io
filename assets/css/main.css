@@ -3631,3 +3631,396 @@ kbd {
 kbd, samp {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
+
+.pricing-table thead tr, .pricing-table thead tr th, .pricing-table thead tr td{
+	border-collapse: collapse;
+	background: #2980b9;
+    padding: 10px;
+    color:#fff;
+/*
+	border: 1px solid #497cb1;
+*/
+}
+
+.pricing-table thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+	text-align: center !important;
+}
+
+.pricing-table tbody tr, .pricing-table tbody tr td, .pricing-table tbody tr th{
+	border-top: 2px solid #ddd;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+/*
+.pricing-table thead>tr>th, .pricing-table thead>tr>td {
+	padding: 8px;
+	line-height: 1.428571429;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+*/
+.pricing-table tbody th, .tsection{
+	text-align: left;
+	margin: 2px auto;
+	font-size:15px;
+}
+.pricing-table tbody > tr > th {
+	padding-left: 5px;	
+}
+
+.pricing-table td.tsection{
+	border-collapse: collapse;
+    background: #f8f9fb;
+	border: 1px solid #ddd;    
+	border-bottom: 1px solid #ddd;
+    padding: 10px;
+    color: #666;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;	
+}
+
+.pricing-table td.sub-title {
+	border-collapse: collapse;
+    background: #eee;
+/*
+    border: 1px solid #eee !important;
+*/
+    padding: 10px;
+    color: #666;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+.pricing-table td.sub-title strong{
+    font-size: 15px;
+    margin: 15px auto 0;
+    line-height: 15px;
+}
+
+.pricing-table td.sub-title small{
+    text-transform: lowercase;
+    line-height: 11px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.pricing-table td.tfooter {
+	border-collapse: collapse;
+    background: #3498db;
+/*
+	border: 1px solid #000 !important;
+	border-top: 2px solid #000 !important;
+    border: 1px solid #eee !important;
+*/
+    padding: 10px;
+    color: #666;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pricing-table td .fa,.pricing-table th .fa {
+    margin-right: 5px;
+    color: #4a6781;
+}
+
+/*
+.pricing-table .blue-border{
+	border-left: 2px solid #fe464d !important;
+	border-right: 2px solid #fe464d !important;
+	border-collapse: collapse;
+}
+
+.pricing-table .blue-border-top{
+	border-top: 2px solid #fe464d !important;
+	border-left: 2px solid #fe464d !important;
+	border-right: 2px solid #fe464d !important;
+	border-collapse: collapse;
+}
+
+.pricing-table td.tfooter .blue-border-bottom, .pricing-table .blue-border-bottom{
+	border: 2px solid #fe464d !important;
+	border-top: 2px solid #000 !important;
+	border-collapse: collapse;
+}
+*/
+
+/*
+    box-shadow: 4px 0 10px -5px #497cb1,-4px 0 10px -5px #497cb1;
+    border-left: 2px solid #497cb1!important;
+    border-right: 2px solid #497cb1!important;
+    border-top: 1px solid #497cb1!important;
+ */
+.pricing-table tr>td:nth-child(4) {
+    background: #ecf7ff;
+    border-collapse: collapse;
+	border:1px solid #ddd !important;
+	border-left:1px solid #ddd !important;
+	border-right:1px solid #ddd !important;
+}
+
+.price-box {
+	height: 70px;
+	width: 70px;
+	bottom: -27px;
+	border-radius: 100px;
+	border: none;
+	color: #fff;
+	background-color: #33cd7b;
+	padding: 5px;
+	margin-left:20px;
+}
+
+.price-box.free {
+    background-color: #3faaf8 !important;
+}
+
+.price-box strong {
+    display: block;
+    font-size: 15px;
+    left: 50%;
+    margin: 15px auto 0;
+    width: 63px;
+    line-height: 10px;
+}
+
+.price-box small {
+    display: block;
+    text-transform: lowercase;
+    line-height: 10.5px;
+    font-size: 10.5px;
+    font-weight: 400;
+    width: 60px;
+    margin: -12px auto;
+    left: 50%;
+}
+.targetu{
+	border-bottom: 1px dotted #7b8087;
+}
+
+.fa-close, sup{
+	color: #fe464d !important;
+	font-size: 12px !important;	
+}
+.fa-check{
+	color: #33cd7b !important;
+	font-size: 14px !important;
+}
+
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+.box-shadow--8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+.box-shadow--16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+.shadow{
+	box-shadow:inset 0 0 0 100px #5FCBE5;
+	position:relative;
+}
+.shadow:before,
+.shadow:after {
+	content:'';
+	position:absolute;
+	height:100%;
+	top:0;
+	bottom:0;
+	width:1px;
+	box-shadow:-2px 0 2px;
+}
+.shadow:before {
+	left:0;
+}
+.shadow:after {
+	right:0;
+	box-shadow:2px 0 2px;
+}
+
+.blue-cta-boxxed{
+	background:#253340;
+	padding-top:20px;
+	padding-bottom:0px;
+	color:#fff;
+}
+.blue-cta-boxxed a{
+	color:#fff;
+	font-weight: bolder;
+}
+
+.gold{
+	color:#253340 !important;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 12px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}
+.collapse {
+    display: none;
+}

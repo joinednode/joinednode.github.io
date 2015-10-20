@@ -13,12 +13,12 @@
 	<meta name="twitter:creator" content="joinednode">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-	<meta name="twitter:image" content="{% if page.image %}https://joinednode.com{{ page.image }}{% endif %}" />	
+	<meta name="twitter:image" content="{% if page.image %}https://joinednode.com{{ page.image }}{% else %}https://joinednode.com/assets/joinednode.png{% endif %}" />
 <!-- Facebook Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:image" content="{% if page.image %}https://joinednode.com{{ page.image }}{% endif %}" />	
+	<meta property="og:image" content="{% if page.image %}https://joinednode.com{{ page.image }}{% else %}https://joinednode.com/assets/joinednode.png{% endif %}" />	
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta property="og:locale" content="en_US">
@@ -55,9 +55,9 @@
 						<li><a href="/docs">Docs</a></li>
 						<li><a href="/pricing">Pricing</a></li>
 						<li><a class="bloglink" href="http://blog.joinednode.com" title="The Joined Node Blog">Blog</a></li>
-{% comment %}
 						<li><a href="https://app.joinednode.com/login" class="btn btn-primary">Login</a></li>
 						<li><a href="https://app.joinednode.com/signup" class="btn btn-default">Signup</a></li>
+{% comment %}
 						<li>
 							<a href="#">Dropdown</a>
 							<ul>
@@ -119,12 +119,13 @@
 		</div>
 		<!-- Copyright -->
 		<div id="copyright">
-			&copy; 2015, Joined Node is a <a href="http://flybase.io">Flybase</a> production.
+			&copy; {{ site.time | date: '%Y' }}, Joined Node is a <a href="http://flybase.io">Flybase</a> production.
 		</div>
 	</div>
 
 	<!-- Scripts -->
 	<script src="/assets/js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 	<script src="/assets/js/jquery.dropotron.min.js"></script>
 	<script src="/assets/js/skel.min.js"></script>
 	<script src="/assets/js/util.js"></script>

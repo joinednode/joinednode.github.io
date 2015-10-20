@@ -75,6 +75,11 @@
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
 
+$('[data-toggle="tooltip"]').tooltip({ 
+			container: 'body',
+			template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner" style="padding:10px;"></div></div>'
+		})
+
 	});
 
 })(jQuery);
