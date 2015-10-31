@@ -3465,6 +3465,15 @@ pre code {
     font-size: 14px !important;
 }
 
+.mdn-tooltip{
+    background: #fff !important;
+}
+
+.mdn-tooltip.invis{
+	background: #354153 !important;
+	border: #354153 !important;
+}
+
 .list-unstyled{
 	padding-left: 0;
 	list-style: none;
@@ -4024,3 +4033,15 @@ kbd, samp {
 .collapse {
     display: none;
 }
+
+/* Modern table wrappers
+-------------------------------------------------- */
+.modern-table-wrapper{ 
+	max-width:1140px;
+	padding:40px 20px;
+	padding-bottom:10px;
+	margin:0 auto; 
+}
+
+.modern-table-wrapper-1{ max-width:800px; }
+.modern-table-wrapper-2{ max-width:400px; }
