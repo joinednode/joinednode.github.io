@@ -3472,6 +3472,7 @@ pre code {
 .mdn-tooltip.invis{
 	background: #354153 !important;
 	border: #354153 !important;
+	border-bottom: 1px dotted #fff;
 }
 
 .list-unstyled{
