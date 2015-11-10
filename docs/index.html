@@ -8,9 +8,9 @@ subtitle2: Developer Docs
 ---
 <h3>Get up and running in 30 seconds <em>or less</em></h3>
 
-<p>Getting started with Joined Node is actually really simple, you just <a href="https://app.joinednode.com/signup">Sign up</a>, and create your first <em>Task</em>.</p>
+<p>Getting started with Joined Node is actually really simple, you just <a href="https://app.joinednode.com/signup">sign up</a>, and create your first <em>Task</em>.</p>
 
-<div class="well">
+<div class="box effect8 well">
 	<p><em>Tasks</em> are the heart of Joined Node, a <em>Task</em> is a snippet of code that can be called using a simple HTTP request, either directly in a browser or anywhere else. These Tasks can be very simple, or they can be extended as much as you wish.</p>
 </div>
 
@@ -28,7 +28,7 @@ subtitle2: Developer Docs
 </div>	
 <pre><code class="hljs javascript">
 module.exports = function(context, callback) { 
-callback(null, {message: "Hello " + context.data.who + '!' }); 
+	callback(null, {message: "Hello " + context.data.who + '!' }); 
 }
 </code></pre>
 
