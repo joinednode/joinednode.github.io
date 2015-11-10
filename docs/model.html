@@ -6,11 +6,13 @@ subtitle: Programming Model
 subtitle2: Developer Docs
 permalink: /docs/model/
 ---
-<p>We want Joined Node Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.</p>
+<p>We've developed Joined Node to allow Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.</p>
 
-<h3>1. Function with callback</h3>
+<h3>1. Callback</h3>
 
-<p>In the simplest mechanism, you must provide JavaScript code that returns a function which accepts a single argument: a callback. To indicate completion, the function must call the callback with two arguments: an error, and the result.</p>
+<p>In the simplest model, you must provide JavaScript code that returns a function which accepts a single argument: a callback.</p>
+
+<p>To indicate completion, the function must call the callback with two arguments: an error, and the result.</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -19,14 +21,14 @@ permalink: /docs/model/
 	<span>hello.js</span>
 </div>	
 <pre><code class="hljs javascript">
-return function(callback) {
+module.exports = function(callback) {
 	calback(null, { i_am: 'done '});
 }
 </code></pre><br />
 
-<p>When the <code>callback</code> is invoked, the result value or an error will be serialized as JSON and sent back to the caller as application/json content type.</p>
+<p>When the <code>callback</code> is invoked, the result value or an error will be serialized as JSON and sent back to the caller as <content>application/json</content> content type.</p>
 
-<h3>2. Function with context</h3>
+<h3>2. Context and Callback</h3>
 
 <p>A slightly more advanced version of the programming model allows you to return a function that accepts two arguments: a <code>context</code> and a <code>callback</code>.</p>
 
@@ -37,7 +39,7 @@ return function(callback) {
 	<span>hello.js</span>
 </div>	
 <pre><code class="hljs javascript">
-return function(context, callback) {
+module.exports = function(context, callback) {
 	callback(null, { hello: context.data.name || 'Anonymous' });
 }
 </code></pre><br />
@@ -61,12 +63,14 @@ return function(context, callback) {
 	<span>hello.js</span>
 </div>	
 <pre><code class="hljs javascript">
-return function (context, req, res) {
+module.exports = function (context, req, res) {
 	res.writeHead(200, { 'Content-Type': 'text/html '});
 	res.end('&lt;h1>Hello, world!&lt;/h1>');
 }
 </code></pre><br />
 
 <p>The <code>context</code> argument behaves the same way as in the two simpler programming models. Note that this programming model does not have a concept of a callback. Ending the HTTP response indicates completion.</p>
+
+<p>The other of the variables is also important.</p>
 
 <p>Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.</p>
