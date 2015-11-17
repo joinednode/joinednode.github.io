@@ -4,7 +4,7 @@ title: "Send SMS - Developer Docs"
 subheader: Send An SMS with Twilio
 subtitle:  Send SMS
 subtitle2: Developer Docs
-permalink: /docs/templates/send_sms.html
+permalink: /docs/templates/send_sms
 ---
 
 This task is a handy one that we use daily on various projects.
