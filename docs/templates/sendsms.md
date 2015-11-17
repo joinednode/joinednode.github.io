@@ -53,3 +53,5 @@ module.exports = function (context, callback) {
 ```
 <br />
 This code will use the `Environment Variables` we entered earlier as `context.env.{key}` variables to connect to Twilio, and then will use the `context.data.to` and `context.data.message` to send the message we've passed to it.
+
+Once this has been setup, all you have to do is trigger a call to this task's unique URL with the variables of `to` and `message` and it will trigger an SMS message being sent to the phone number defined by `to`.

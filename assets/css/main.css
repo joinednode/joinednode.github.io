@@ -1798,7 +1798,7 @@
 			margin-left: 0;
 		}
 
-	ul.pennants {
+	ul.pennants,div.pennants {
 		margin: 0;
 		text-align: center;
 	}
@@ -3508,6 +3508,19 @@ pre code {
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    color: #000 !important;
+}
+.well a, .well .pennant span,
+.well h3,.well h2,.well h4{
+	color:#000 !important;
+}
+
+.well .pennant span:before {
+    color: #000 !important;
+}
+
+.well .pennant{
+	border: solid 2px #000 !important;
 }
 
 hr.fancy-line { 
@@ -4310,4 +4323,23 @@ body {background:#ccc}
         -ms-transform:skew(8deg) rotate(3deg);
          -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
+}
+
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
