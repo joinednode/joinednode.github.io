@@ -3622,7 +3622,7 @@ pre, code {
     background-color: #3f3f3f;
     color: #fff !important;
 }
-p code {
+p code, ul li code, ol li code {
     padding: 2px 4px;
     font-size: 90%;
     color: #c7254e !important;
