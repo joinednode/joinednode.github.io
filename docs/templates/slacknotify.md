@@ -9,7 +9,7 @@ permalink: /docs/templates/slack_notify.html
 
 Being able to quickly send a message to your Slack channels is a handy task.
 
-First, we need to set up our variables, so add the following parameters to the `Encrypted Environment Variables` section of your IDE:
+First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
 1. `MY_SLACK_WEBHOOK_URL` => `https://myaccountname.slack.com/services/hooks/incoming-webhook?token=myToken`
 2. `icon_url` => `http://mysite.com/logo.png`

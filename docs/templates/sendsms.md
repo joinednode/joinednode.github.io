@@ -9,7 +9,7 @@ permalink: /docs/templates/send_sms.html
 
 This task is a handy one that we use daily on various projects.
 
-First, we need to set up our variables, so add the following parameters to the `Encrypted Environment Variables` section of your IDE:
+First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
 1. `TWILIO_AUTH_TOKEN` => `YOUR-TWILIO-TOKEN`
 2. `TWILIO_ACCOUNT_SID` => `YOUR-TWILIO-ACCOUNT-SID`
