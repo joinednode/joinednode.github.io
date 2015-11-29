@@ -39,9 +39,19 @@ permalink: /docs/features/
 	<li><span class="icon fa-bar-chart-o"></span> <strong>Multi Tenant Sandbox</strong>: Allow your customers to extend your product using Node.js code instead of creating your own scripting language.</li>
 </ul>							
 
-<p>These Joined Node Tasks are also known as <strong>microservices</strong>, each task does one job, and does it well. This usually means that Tasks tend to avoid interdependencies: if one Task has a hard requirement for other Tasks, then you should ask yourself if it makes sense to make them all part of the same unit. This also helps keep your code clean and organized, while also helping you build out your apps faster when you don't have to worry about huge backend systems.</p>
+<p>These Joined Node Tasks are also known as <strong>microservices</strong>, each task does one job, and does it well. This also helps keep your code clean and organized, while also helping you build out your apps faster when you don't have to worry about huge backend systems.</p>
 
-<p>With Joined Node, we're recreating how you build your apps, rather than building huge monolithic backend services, you can focus on building singular microservices tasks that do one job and do it well. For example you want to send an email, just trigger a post to a task that sends an email with the information included, or if you want to send an SMS message, you can do the same.</p>
+{% comment %}
+What makes microservices particularly attractive to development teams is their independence. Teams can work on a problem or group of problems on their own. This creates several attractive qualities favored by many developers:
+
+Freedom to pick the right tool: Is that new library or development platform something you always wanted to use? You can (if it's the right tool for the job).
+Quick iteration: Was the first version suboptimal? No problem, version 2 can be out the door in no time. Because microservices tend to be small, changes can be implemented relatively quickly.
+Rewrites are a possibility: In contrast with monolithic solutions, since microservices are small, rewrites are a possibility. Was the technology stack the wrong pick? No problem, switch to the right alternative.
+Code quality and readability: Isolated development units tend to be of higher quality and new developers can get up to speed with the existing code fairly easily.
+{% endcomment %}
+
+<p>With Joined Node, we're recreating how you build your apps, rather than building huge monolithic backend services, you can focus on building singular microservices tasks that do one job and do it well. For example you want to send an email, just trigger a post to a task that sends an email with the information included, or if you want to send an SMS message, you can just build another Task to call.</p>
+
 <p>This lets you securely, and rapidly build your apps</p>
 
 <p class="aligncenter">
