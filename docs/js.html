@@ -8,7 +8,7 @@ permalink: /docs/js/
 ---
 <p>You can call your Joined Node Tasks easily with a single HTTP call, or using other libraries to send the request, but we've also made it easy to use it with your JavaScript apps using our library.</p>
 
-<p>Use the <a href="https://github.com/joinednode/joinednode-js">JoinedNode JavaScript Library</a> to call your Joined Node Tasks from the browser using a require-like pattern. Run node.js code without a backend. </p>
+<p>Use the <a href="https://github.com/joinednode/joinednode-js">Joined Node JavaScript Library</a> to call your Joined Node Tasks from the browser using a require-like pattern. Run node.js code without a backend. </p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -25,19 +25,15 @@ joinednode('&lt;your-joinednode-app>').then(function(result) {
 
 <h3>Install</h3>
 
-<p>From <A href="https://npmjs.org">npm</A>:</p>
 
-<div class="window-toolbar">
-	<i class="fa fa-circle red"></i>
-	<i class="fa fa-circle orange"></i>
-	<i class="fa fa-circle green"></i>
-	<span>code sample</span>
-</div>	
-<pre><code class="hljs bash">
-npm install joinednode
-</code></pre><br />
+<p>There are two ways you can run the Joined Node Javascript Library, you can run it from a browser or from another node.js script.</p>
 
-<p>Or our CDN:</p>
+<p>Let's look at running it from a browser first.</p>
+
+
+<h4>Inside a browser</h4>
+
+<p>You want to use our CDN to include the library:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -48,8 +44,6 @@ npm install joinednode
 <pre><code class="hljs html">
 &lt;script src="https://cdn.joinednode.com/joinednode.min.js">&lt;/script>
 </code></pre><br />
-
-<h3>Usage</h3>
 
 <p>If you haven't created a Joined Node account yet, you can create one now</p>
 
@@ -68,7 +62,23 @@ joinednode('&lt;your-joinednode-app>').then(function(result) {
 });
 </code></pre><br />
 
-<p>Or from a node.js app:</p>
+<hr />
+
+<h4>Install via NPM:</h4>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs bash">
+npm install joinednode
+</code></pre><br />
+
+<p>If you haven't created a Joined Node account yet, you can create one now</p>
+
+<p>Once created, every task is callable by using your <code>unique container id</code> and the task's <code>unique id</code>. This is how you call it:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -82,6 +92,8 @@ joinednode('&lt;your-joinednode-app>').then(function(result) {
 	console.log(result);
 });
 </code></pre><br />
+
+<hr />
 
 <h4>Sending parameters</h4>
 

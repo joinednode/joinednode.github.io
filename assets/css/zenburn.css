@@ -15,7 +15,6 @@ based on dark.css by Ivan Sagalaev
   text-align: left;
   line-height: 2;
   font-size: 14px;
-/*  min-height:210px;*/
 }
 
 .hljs-keyword,
@@ -119,4 +118,9 @@ based on dark.css by Ivan Sagalaev
 .xml .css,
 .xml .hljs-cdata {
   opacity: 0.5;
+}
+
+
+.hljs-tag .hljs-title, .nginx .hljs-title, .xml .hljs-title, .html .hljs-title {
+	color: #fff !important;
 }
