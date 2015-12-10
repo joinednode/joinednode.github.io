@@ -2345,6 +2345,9 @@
 		color: #fff !important;
 		font-weight: 600;
 	}
+	#second .well a,#second .well strong{
+		color:#000 !important;
+	}
 	#logo > .fa {
 		color: #343e49 !important;
 		font-weight: lighter;
@@ -3511,7 +3514,7 @@ pre code {
     color: #000 !important;
 }
 .well a, .well .pennant span,
-.well h3,.well h2,.well h4{
+.well h3,.well h2,.well h4,.well strong{
 	color:#000 !important;
 }
 
@@ -4338,4 +4341,82 @@ hr.style-seven:before {
     border-color: white;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+p.bubble
+{
+	position: relative;
+	width: 60%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	margin: 60px auto;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+	color:#000 !important;
+}
+
+p.thought
+{
+	width: 60%;
+	vertical-align: middle;
+	line-height: 100px;
+	-webkit-border-radius: 108px;
+	-moz-border-radius: 108px;
+	border-radius: 108px;
+	color:#000 !important;
+}
+
+p.bubble:before, p.bubble:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+p.speech:before
+{
+	left: 30px;
+	top: 100px;
+	border: 25px solid;
+	border-color: #666 transparent transparent #666;
+}
+
+p.speech:after
+{
+	left: 38px;
+	top: 100px;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+p.thought:before, p.thought:after
+{
+	left: 10px;
+	top: 70px;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 28px;
+	-moz-border-radius: 28px;
+	border-radius: 28px;
+}
+
+p.thought:after
+{
+	width: 20px;
+	height: 20px;
+	left: 5px;
+	top: 100px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
 }
