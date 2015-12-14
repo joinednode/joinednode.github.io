@@ -7,9 +7,11 @@ subtitle2: Developer Docs
 permalink: /docs/create-tokens/
 ---
 
-<p>The Joined Node token request endpoint is used to issue a new token.</p>
+<p>The Joined Node token request endpoint is used to issue a new token. Issuing new tokens is useful when you want to provide your application or specific user with a restricted capability of running tasks.</p>
 
-<p>Issuing new tokens is useful when you want to provide your application or specific user with a restricted capability of running tasks. For example, you can restrict the task token to only execute code from a specific task, or specify secret parameters that will be passed to that code at execution time.</p>
+{% comment %}
+For example, you can restrict the task token to only execute code from a specific task, or specify secret parameters that will be passed to that code at execution time.
+{% endcomment %}
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -22,6 +24,7 @@ HTTPS POST https://api.joinednode.com/create-token/&lt;your-container-id>
 Content-Type: application/json 
 </code></pre>
 <br />
+
 <p>The request must be <a href="/docs/auth">authenticated</a> by specifying the token as the <code>token</code> URL query parameter or with the <code>Authorization</code> HTTP request header.</p>
 
 <p>Tokens are only required on tasks that are set to <code>Private</code> but can be used on <code>Public</code> tasks as well.</p>
