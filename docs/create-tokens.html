@@ -1,0 +1,31 @@
+---
+layout: docs
+title: "Creating Tokens - Developer Docs"
+subheader: "Create restricted tokens for individual users or applications"
+subtitle: "Creating Tokens"
+subtitle2: Developer Docs
+permalink: /docs/create-tokens/
+---
+
+<p>The Joined Node token request endpoint is used to issue a new token.</p>
+
+<p>Issuing new tokens is useful when you want to provide your application or specific user with a restricted capability of running tasks. For example, you can restrict the task token to only execute code from a specific task, or specify secret parameters that will be passed to that code at execution time.</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>token.js</span>
+</div>	
+<pre><code class="hljs javascript">
+HTTPS POST https://api.joinednode.com/create-token
+Content-Type: application/json 
+</code></pre>
+<br />
+<p>The request must be <a href="/docs/auth">authenticated</a> by specifying the token as the <code>token</code> URL query parameter or with the <code>Authorization</code> HTTP request header.</p>
+
+<p>Tokens are only required on tasks that are set to <code>Private</code> but can be used on <code>Public</code> tasks as well.</p>
+
+{% comment %}
+<p>The content type of the request must be <code>application/json</code>. The body of the request must contain a JSON object representing the intended restrictions of the token to be issued. The object can specify the following properties (all of them optional):</p>
+{% endcomment %}
