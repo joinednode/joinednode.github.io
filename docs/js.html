@@ -125,9 +125,9 @@ joinednode.post('&lt;your-joinednode-app>', { foo: 'bar' });
 
 <h4>Calling private tasks</h4>
  
-<p>Save your task as <code>Private</code> via the Joined Node Dashboard.</p>
+<p>If you set your task as <code>Private</code> via the Joined Node Dashboard, then you must pass <a href="/docs/auth/">authorization tokens</a> when you call your task.</p>
 
-Then create a token via our API:
+<p>To <a href="/docs/create-tokens/">create</a> a token via the Joined Node API:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -139,7 +139,7 @@ Then create a token via our API:
 $ curl -X POST https://api.joinednode.com/create-token/&lt;your-joinednode-container>
 </code></pre><br />
 
-<p>you then call your task using a token obtained from Joined Node:</p>
+<p>You then call your task using a token obtained from Joined Node:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -153,3 +153,5 @@ joinednode.withAuth(token)('&lt;your-joinednode-app>').then(function(result) {
 	console.log(result);
 });
 </code></pre><br />
+
+<p>This lets you control access to your tasks.</p>
