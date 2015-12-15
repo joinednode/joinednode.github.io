@@ -122,3 +122,34 @@ joinednode('&lt;your-joinednode-app>', {foo: 'bar'}).then(function(result) {
 joinednode.get('&lt;your-joinednode-app>');
 joinednode.post('&lt;your-joinednode-app>', { foo: 'bar' });
 </code></pre><br />
+
+<h4>Calling private tasks</h4>
+ 
+<p>Save your task as <code>Private</code> via the Joined Node Dashboard.</p>
+
+Then create a token via our API:
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+$ curl -X POST https://api.joinednode.com/create-token/&lt;your-joinednode-container>
+</code></pre><br />
+
+<p>you then call your task using a token obtained from Joined Node:</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>code sample</span>
+</div>	
+<pre><code class="hljs javascript">
+var joinednode = require('joinednode')('&lt;your-joinednode-container>');
+joinednode.withAuth(token)('&lt;your-joinednode-app>').then(function(result) {
+	console.log(result);
+});
+</code></pre><br />
