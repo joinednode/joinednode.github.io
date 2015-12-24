@@ -6,9 +6,9 @@ subtitle: Javascript Library
 subtitle2: Developer Docs
 permalink: /docs/js/
 ---
-<p>You can call your Joined Node Tasks easily with a single HTTP call, or using other libraries to send the request, but we've also made it easy to use it with your JavaScript apps using our library.</p>
+<p>You can call your Joined Node Recipes easily with a single HTTP call, or using other libraries to send the request, but we've also made it easy to use it with your JavaScript apps using our library.</p>
 
-<p>Use the <a href="https://github.com/joinednode/joinednode-js">Joined Node JavaScript Library</a> to call your Joined Node Tasks from the browser using a require-like pattern. Run node.js code without a backend. </p>
+<p>Use the <a href="https://github.com/joinednode/joinednode-js">Joined Node JavaScript Library</a> to call your Joined Node Recipes from the browser using a require-like pattern. Run node.js code without a backend. </p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -47,7 +47,7 @@ joinednode('&lt;your-joinednode-app>').then(function(result) {
 
 <p>If you haven't created a Joined Node account yet, you can create one now</p>
 
-<p>Once created, every task is callable by using your <code>unique container id</code> and the task's <code>unique id</code>. This is how you call it:</p>
+<p>Once created, every recipe is callable by using your <code>unique container id</code> and the recipe's <code>unique id</code>. This is how you call it:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -78,7 +78,7 @@ npm install joinednode
 
 <p>If you haven't created a Joined Node account yet, you can create one now</p>
 
-<p>Once created, every task is callable by using your <code>unique container id</code> and the task's <code>unique id</code>. This is how you call it:</p>
+<p>Once created, every recipe is callable by using your <code>unique container id</code> and the recipe's <code>unique id</code>. This is how you call it:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -123,9 +123,9 @@ joinednode.get('&lt;your-joinednode-app>');
 joinednode.post('&lt;your-joinednode-app>', { foo: 'bar' });
 </code></pre><br />
 
-<h4>Calling private tasks</h4>
+<h4>Calling private recipes</h4>
  
-<p>If you set your task as <code>Private</code> via the Joined Node Dashboard, then you must pass <a href="/docs/auth/">authorization tokens</a> when you call your task.</p>
+<p>If you set your recipe as <code>Private</code> via the Joined Node Dashboard, then you must pass <a href="/docs/auth/">authorization tokens</a> when you call your recipe.</p>
 
 <p>To <a href="/docs/create-tokens/">create</a> a token via the Joined Node API:</p>
 
@@ -139,7 +139,7 @@ joinednode.post('&lt;your-joinednode-app>', { foo: 'bar' });
 $ curl -X POST https://api.joinednode.com/create-token/&lt;your-joinednode-container>
 </code></pre><br />
 
-<p>You then call your task using a token obtained from Joined Node:</p>
+<p>You then call your recipe using a token obtained from Joined Node:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -154,4 +154,4 @@ joinednode.withAuth(token)('&lt;your-joinednode-app>').then(function(result) {
 });
 </code></pre><br />
 
-<p>This lets you control access to your tasks.</p>
+<p>This lets you control access to your recipes.</p>

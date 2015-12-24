@@ -6,7 +6,7 @@ subtitle: Query String Parameters
 subtitle2: Developer Docs
 permalink: /docs/parameters/
 ---
-<p>You can pass parameters to your code using URL query string of the request. All URL query parameters will be propagated to the task when it runs.</p>
+<p>You can pass parameters to your code using URL query string of the request. All URL query parameters will be propagated to the recipe when it runs.</p>
 
 <p>To take advantage of this feature, define your JavaScript function such that it accepts two arguments instead of one: the <code>context</code> and the <code>callback</code>:</p>
 
@@ -22,7 +22,7 @@ module.exports = function(context, callback) {
 }
 </code></pre>
 <br />
-<p>Passing <code>?who=me</code> in your URL will add a variable called <code>who</code> to your <code>context.data</code> object and will be accessible to your Task.</p>
+<p>Passing <code>?who=me</code> in your URL will add a variable called <code>who</code> to your <code>context.data</code> object and will be accessible to your Recipe.</p>
 
 <p>All allowed URL query parameters of the request will be provided to the code in the form of <code>context.data</code> JavaScript object.</p>
 

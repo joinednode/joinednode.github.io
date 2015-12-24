@@ -6,13 +6,13 @@ subtitle: Programming Model
 subtitle2: Developer Docs
 permalink: /docs/model/
 ---
-<p>We've developed Joined Node to allow Tasks to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of tasks you can run.</p>
+<p>We've developed Joined Node to allow Recipes to be hyper-flexible, while also following a set programming model. With that in mind, there are three types of recipes you can run.</p>
 
-<h3>1. Callback</h3>
+<h3>Callback</h3>
 
 <p>In the simplest model, you must provide JavaScript code that returns a function which accepts a single argument: <code>a callback</code>.</p>
 
-<p>To indicate completion, the function must call the callback with two arguments: an error, and the result.</p>
+<p>To show the recipe has completed, you must call the callback with two arguments: an error (or <code>null</code> if no error), and the result.</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -22,13 +22,13 @@ permalink: /docs/model/
 </div>	
 <pre><code class="hljs javascript">
 module.exports = function(callback) {
-	calback(null, { i_am: 'done '});
+	callback(null, { i_am: 'done '});
 }
 </code></pre><br />
 
 <p>When the <code>callback</code> is invoked, the result value or an error will be serialized as JSON and sent back to the caller as <content>application/json</content> content type.</p>
 
-<h3>2. Context and Callback</h3>
+<h3>Context and Callback</h3>
 
 <p>A slightly more advanced version of the programming model allows you to return a function that accepts two arguments: a <code>context</code> and a <code>callback</code>.</p>
 
@@ -44,15 +44,17 @@ module.exports = function(context, callback) {
 }
 </code></pre><br />
 
-<p>The <code>context</code> parameter is a JavaScript object with data and optionally body properties.</p>
+<p>The <code>context</code> parameter is a JavaScript object with the following properties:</p>
 
-<p>The <code>context.data</code> is a JavaScript object that combines parameters passed to the code via GET.</p>
+<p>The <code>data</code> is a JavaScript object that combines parameters passed to the code via GET.</p>
 
-<p>The <code>context.method</code> is a JavaScript variable that tells you what method was used, GET or POST.</p>
+<p>The <code>env</code> is a JavaScript object that passes an object containing your <a href="/docs/env/">encrypted parameters</a>.</p>
+
+<p>The <code>method</code> is a JavaScript variable that tells you what method was used, GET or POST.</p>
 
 <p>The <code>context.body</code> is JavaScript representation of a parsed <code>application/json</code> or <code>application/x-www-form-urlencoded</code> request body. It is only present for requests with bodies such as a POST.</p>
 
-<h3>3. Full HTTP control</h3>
+<h3>Total HTTP control</h3>
 
 <p>The most flexible programming model allows you to take full control over the HTTP request and response.</p>
 
@@ -73,4 +75,4 @@ module.exports = function (context, req, res) {
 
 <p>The order of the variables is also important.</p>
 
-<p>Our programming model allows for flexibility in building your Joined Node tasks while also sticking to a set model, this helps keep apps streamlined.</p>
+<p>Our programming model allows for flexibility in building your Joined Node recipes while also sticking to a set model, this helps keep apps streamlined.</p>

@@ -7,11 +7,11 @@ subtitle2: Developer Docs
 permalink: /docs/auth/
 ---
 
-<p>When you create a Task, you have the option of making it <code>public</code> or <code>private</code>.</p>
+<p>When you create a Recipe, you have the option of making it <code>public</code> or <code>private</code>.</p>
 
-<p><code>Public</code> tasks are tasks that can be called via an HTTP request and don't require authentication.</p>
+<p><code>Public</code> recipes are recipes that can be called via an HTTP request anytime and don't require authentication.</p>
 
-<p><code>Private</code> tasks are tasks that require authentication using a Joined Node token. The token can be provided either using the <code>Authorization</code> request header, or via the <code>token</code> URL query parameter.</p>
+<p><code>Private</code> recipes are recipes that require authentication using a Joined Node token. The token can be provided either using the <code>Authorization</code> request header, or via the <code>token</code> URL query parameter.</p>
 
 <p>Using the <code>Authorization</code> header is recommended as this prevents certain cases where your token can be cached by intermediate HTTP processors.</p>
 

@@ -7,7 +7,7 @@ subtitle2: Developer Docs
 permalink: /docs/templates/send_sms.html
 ---
 
-This task is a handy one that we use daily on various projects.
+This recipe is a handy one that we use daily on various projects.
 
 First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
@@ -15,10 +15,10 @@ First, we need to set up our variables, so add the following parameters to the [
 2. `TWILIO_ACCOUNT_SID` => `YOUR-TWILIO-ACCOUNT-SID`
 3. `TWILIO_NUMBER` => `A-NUMBER-FROM-YOUR-TWILIO-ACCOUNT`
 
-These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
+These variables will be encrypted when you save, and only viewable either from your Recipe itself or when you edit it
 
 
-Now, let's add our Node.js task code:
+Now, let's add our Node.js recipe code:
 
 ```javascript
 var twilio = require('twilio');
@@ -54,4 +54,4 @@ module.exports = function (context, callback) {
 <br />
 This code will use the `Environment Variables` we entered earlier as `context.env.{key}` variables to connect to Twilio, and then will use the `context.data.to` and `context.data.message` to send the message we've passed to it.
 
-Once this has been setup, all you have to do is trigger a call to this task's unique URL with the variables of `to` and `message` and it will trigger an SMS message being sent to the phone number defined by `to`.
+Once this has been setup, all you have to do is trigger a call to this recipe's unique URL with the variables of `to` and `message` and it will trigger an SMS message being sent to the phone number defined by `to`.

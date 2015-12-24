@@ -7,16 +7,16 @@ subtitle2: Developer Docs
 permalink: /docs/templates/mongo_upsert.html
 ---
 
-This task is a good starter for connecting to MongoDB databases. Here at Joined Node, we recommend [MongoLab](http://mongolab.com)
+This recipe is a good starter for connecting to MongoDB databases. Here at Joined Node, we recommend [MongoLab](http://mongolab.com)
 
 First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
 1. `MONGO_URL` => `YOUR-MONGODB-URL`
 
-These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
+These variables will be encrypted when you save, and only viewable either from your Recipe itself or when you edit it
 
 
-Now, let's add our Node.js task code:
+Now, let's add our Node.js recipe code:
 
 ```javascript
 "use latest";
@@ -44,14 +44,14 @@ module.exports = function mongoUpsert(context, callback) {
 
 <br />
 
-We will pass three fields into this task:
+We will pass three fields into this recipe:
 
 - **collection**: The name of the db collection where you want to upsert the data
 - **query**: The query for the object you want to update. If this query throws no results, then the `dataToUpsert` will be inserted into the collection
 - **dataToUpsert**: Arbirtrary mongodb valid data to upsert in the collection
 
-This task will connect to the mongodb indicated by `context.env.MONGO_URL` and will then use the collection defined by `context.data.collection`.
+This recipe will connect to the mongodb indicated by `context.env.MONGO_URL` and will then use the collection defined by `context.data.collection`.
 
-This task will run the query defined by `context.env.query` and will either insert or update the record using the data passed inside the `context.data.dataToUpsert`.
+This recipe will run the query defined by `context.env.query` and will either insert or update the record using the data passed inside the `context.data.dataToUpsert`.
 
 We then close our database connection and return the result of the query via our callback function.

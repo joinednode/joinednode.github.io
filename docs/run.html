@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: "Executing Tasks - Developer Docs"
+title: "Executing Recipes - Developer Docs"
 subheader: "Execute Custom Node.js code with a single HTTP call"
-subtitle: "Executing Tasks"
+subtitle: "Executing Recipes"
 subtitle2: Developer Docs
 permalink: /docs/run/
 ---
 
-<p>The Joined Node task request endpoint has been set up to be flexible and to execute code in the Joined Node cluster:</p>
+<p>The Joined Node recipe request endpoint has been set up to be flexible and to execute code in the Joined Node cluster:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -16,33 +16,33 @@ permalink: /docs/run/
 	<span>hello.js</span>
 </div>	
 <pre><code class="hljs javascript">
-HTTPS {verb} https://api.joinednode.com/run/{unique-container}/{task-id}
+HTTPS {verb} https://api.joinednode.com/run/{unique-container}/{recipe-id}
 </code></pre>
 <br />
 <p>
 <ol>
 	<li>The <code>{unique-container}</code> URL segment identifies the name of the container to execute the request in. This container is unique and linked only to your account.</li>
-	<li>The <code>{task-id}</code> URL segment identifies the unique id of the task to execute. These tasks are added via the Joined Node Dashboard, and are associated with a single container.</li>
+	<li>The <code>{recipe-id}</code> URL segment identifies the unique id of the recipe to execute. These recipes are added via the Joined Node Dashboard, and are associated with a single container.</li>
 	<li>The <code>{verb}</code> must be POST, PATCH, PUT, or GET.</li>
 </ol>
 </p>
 <div class="well">
 	<h4>Now you Know...</h4>
-	<p>The Joined Node task cluster may cache the task code obtained to reduce the latency of consecutive task requests.</p>
-	<p>If you do decide that you not want any caching (for example, when you frequently modify the code during development), you can specify the <code>task_no_cache=1</code> URL query parameter when making the task request.</p>
-	<p>Using this parameter will force the task cluster to ignore any cached version of the task code and instead get the newest version.</p>
+	<p>The Joined Node recipe cluster may cache the recipe code obtained to reduce the latency of consecutive recipe requests.</p>
+	<p>If you do decide that you not want any caching (for example, when you frequently modify the code during development), you can specify the <code>recipe_no_cache=1</code> URL query parameter when making the recipe request.</p>
+	<p>Using this parameter will force the recipe cluster to ignore any cached version of the recipe code and instead get the newest version.</p>
 </div>
 
 <h4>HTTP Response Codes</h4>
 
-<p>Regardless of how you decide to run the task code, the HTTP response has contains either the result of code execution or an error, depending on the status code of the response as follows:</p>
+<p>Regardless of how you decide to run the recipe code, the HTTP response has contains either the result of code execution or an error, depending on the status code of the response as follows:</p>
 
 <p>
 <ul>
-	<li><strong>200</strong>: Code executed correctly and response contains the result of the task running.</li>
+	<li><strong>200</strong>: Code executed correctly and response contains the result of the recipe running.</li>
 	<li><strong>400</strong>: There was a problem with the data submitted by the caller, the response body contains details.</li>
-	<li><strong>403</strong>: The task is not submitted with the request or does not grant sufficient permissions.</li>
+	<li><strong>403</strong>: The recipe is not submitted with the request or does not grant sufficient permissions.</li>
 	<li><strong>429</strong>: Requests to the <code>{unique-container}</code> are throttled. The caller is expected to wait at least the amount of time specified in the <code>Retry-After</code> HTTP response header before re-attempting the request.</li>
-	<li><strong>500</strong>: Fatal execution error of the task, the response contains details.</li>
+	<li><strong>500</strong>: Fatal execution error of the recipe, the response contains details.</li>
 </ul>
 </p>

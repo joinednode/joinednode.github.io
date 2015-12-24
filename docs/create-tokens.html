@@ -7,10 +7,10 @@ subtitle2: Developer Docs
 permalink: /docs/create-tokens/
 ---
 
-<p>The Joined Node token request endpoint is used to issue a new token. Issuing new tokens is useful when you want to provide your application or specific user with a restricted capability of running tasks.</p>
+<p>The Joined Node token request endpoint is used to issue a new token. Issuing new tokens is useful when you want to provide your application or specific user with a restricted capability of running recipes.</p>
 
 {% comment %}
-For example, you can restrict the task token to only execute code from a specific task, or specify secret parameters that will be passed to that code at execution time.
+For example, you can restrict the recipe token to only execute code from a specific recipe, or specify secret parameters that will be passed to that code at execution time.
 {% endcomment %}
 
 <p>Tokens are linked to the <code>container-id</code> you specify when you create a token, and can not be used with any other containers</p>
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 <p>The request must be <a href="/docs/auth">authenticated</a> by specifying the token as the <code>token</code> URL query parameter or with the <code>Authorization</code> HTTP request header.</p>
 
-<p>Tokens are only required on tasks that are set to <code>Private</code> but can be used on <code>Public</code> tasks as well.</p>
+<p>Tokens are only required on recipes that are set to <code>Private</code> but can be used on <code>Public</code> recipes as well.</p>
 
 {% comment %}
 <p>The content type of the request must be <code>application/json</code>. The body of the request must contain a JSON object representing the intended restrictions of the token to be issued. The object can specify the following properties (all of them optional):</p>

@@ -7,16 +7,16 @@ subtitle2: Developer Docs
 permalink: /docs/templates/mongo.html
 ---
 
-This task is a good starter for connecting to MongoDB databases. Here at Joined Node, we recommend [MongoLab](http://mongolab.com)
+This recipe is a good starter for connecting to MongoDB databases. Here at Joined Node, we recommend [MongoLab](http://mongolab.com)
 
 First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
 1. `MONGO_URL` => `YOUR-MONGODB-URL`
 
-These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
+These variables will be encrypted when you save, and only viewable either from your Recipe itself or when you edit it
 
 
-Now, let's add our Node.js task code:
+Now, let's add our Node.js recipe code:
 
 ```javascript
 var MongoClient = require('mongodb').MongoClient;

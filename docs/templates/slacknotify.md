@@ -7,16 +7,16 @@ subtitle2: Developer Docs
 permalink: /docs/templates/slack_notify.html
 ---
 
-Being able to quickly send a message to your Slack channels is a handy task.
+Being able to quickly send a message to your Slack channels is a handy recipe.
 
 First, we need to set up our variables, so add the following parameters to the [Encrypted Environment Variables](/docs/env/) section of your IDE:
 
 1. `MY_SLACK_WEBHOOK_URL` => `https://myaccountname.slack.com/services/hooks/incoming-webhook?token=myToken`
 2. `icon_url` => `http://mysite.com/logo.png`
 
-These variables will be encrypted when you save, and only viewable either from your Task itself or when you edit it
+These variables will be encrypted when you save, and only viewable either from your Recipe itself or when you edit it
 
-Now, let's add our Node.js task code:
+Now, let's add our Node.js recipe code:
 
 ```javascript
 return function (context, callback) { 
@@ -51,4 +51,4 @@ return function (context, callback) {
 <br />
 This code will use the `Environment Variables` we entered earlier as `context.env.{key}` variables to connect to Slack, and then will use the `context.data.channel`, `context.data.text` and `context.data.username` to send the message we've passed to it.
 
-Once this has been setup, all you have to do is trigger a call to this task's unique URL with the variables of `channel`, `text` and `username` and it will trigger a Slack notification message being sent to the Slack channel specified in `channel`.
+Once this has been setup, all you have to do is trigger a call to this recipe's unique URL with the variables of `channel`, `text` and `username` and it will trigger a Slack notification message being sent to the Slack channel specified in `channel`.

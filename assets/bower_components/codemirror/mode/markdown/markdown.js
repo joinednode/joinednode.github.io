@@ -44,8 +44,8 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
   // match, and true to allow three or more backticks or tildes (as
   // per CommonMark).
 
-  // Turn on task lists? ("- [ ] " and "- [x] ")
-  if (modeCfg.taskLists === undefined) modeCfg.taskLists = false;
+  // Turn on recipe lists? ("- [ ] " and "- [x] ")
+  if (modeCfg.recipeLists === undefined) modeCfg.recipeLists = false;
 
   // Turn on strikethrough syntax
   if (modeCfg.strikethrough === undefined)
@@ -73,7 +73,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
   var hrRE = /^([*\-_])(?:\s*\1){2,}\s*$/
   ,   ulRE = /^[*\-+]\s+/
   ,   olRE = /^[0-9]+([.)])\s+/
-  ,   taskListRE = /^\[(x| )\](?=\s)/ // Must follow ulRE or olRE
+  ,   recipeListRE = /^\[(x| )\](?=\s)/ // Must follow ulRE or olRE
   ,   atxHeaderRE = modeCfg.allowAtxHeaderWithoutSpace ? /^(#+)/ : /^(#+)(?: |$)/
   ,   setextHeaderRE = /^ *(?:\={1,}|-{1,})\s*$/
   ,   textRE = /^[^#!\[\]*_\\<>` "'(~]+/
@@ -190,8 +190,8 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       state.indentation = stream.column() + stream.current().length;
       state.list = true;
       state.listDepth++;
-      if (modeCfg.taskLists && stream.match(taskListRE, false)) {
-        state.taskList = true;
+      if (modeCfg.recipeLists && stream.match(recipeListRE, false)) {
+        state.recipeList = true;
       }
       state.f = state.inline;
       if (modeCfg.highlightFormatting) state.formatting = ["list", "list-" + listType];
@@ -275,11 +275,11 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       }
     }
 
-    if (state.taskOpen) {
+    if (state.recipeOpen) {
       styles.push("meta");
       return styles.length ? styles.join(' ') : null;
     }
-    if (state.taskClosed) {
+    if (state.recipeClosed) {
       styles.push("property");
       return styles.length ? styles.join(' ') : null;
     }
@@ -346,17 +346,17 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       return getType(state);
     }
 
-    if (state.taskList) {
-      var taskOpen = stream.match(taskListRE, true)[1] !== "x";
-      if (taskOpen) state.taskOpen = true;
-      else state.taskClosed = true;
-      if (modeCfg.highlightFormatting) state.formatting = "task";
-      state.taskList = false;
+    if (state.recipeList) {
+      var recipeOpen = stream.match(recipeListRE, true)[1] !== "x";
+      if (recipeOpen) state.recipeOpen = true;
+      else state.recipeClosed = true;
+      if (modeCfg.highlightFormatting) state.formatting = "recipe";
+      state.recipeList = false;
       return getType(state);
     }
 
-    state.taskOpen = false;
-    state.taskClosed = false;
+    state.recipeOpen = false;
+    state.recipeClosed = false;
 
     if (state.header && stream.match(/^#+$/, true)) {
       if (modeCfg.highlightFormatting) state.formatting = "header";
@@ -685,7 +685,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
         strong: false,
         header: 0,
         hr: false,
-        taskList: false,
+        recipeList: false,
         list: false,
         listDepth: 0,
         quote: 0,
@@ -720,7 +720,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
         strikethrough: s.strikethrough,
         header: s.header,
         hr: s.hr,
-        taskList: s.taskList,
+        recipeList: s.recipeList,
         list: s.list,
         listDepth: s.listDepth,
         quote: s.quote,
@@ -753,8 +753,8 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
         state.prevLine = state.thisLine
         state.thisLine = stream
 
-        // Reset state.taskList
-        state.taskList = false;
+        // Reset state.recipeList
+        state.recipeList = false;
 
         // Reset state.trailingSpace
         state.trailingSpace = 0;
