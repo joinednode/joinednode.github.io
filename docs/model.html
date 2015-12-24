@@ -26,11 +26,13 @@ module.exports = function(callback) {
 }
 </code></pre><br />
 
-<p>When the <code>callback</code> is invoked, the result value or an error will be serialized as JSON and sent back to the caller as <content>application/json</content> content type.</p>
+<p>When you invoke the <code>callback</code>, either the result value or an error message will be serialized as JSON and sent back to the caller as <content>application/json</content> content type.</p>
+
+<hr />
 
 <h3>Context and Callback</h3>
 
-<p>A slightly more advanced version of the programming model allows you to return a recipe that accepts two arguments: a <code>context</code> and a <code>callback</code>.</p>
+<p>A slightly more advanced version of the programming model allows you to create a recipe that accepts two arguments: a <code>context</code> and a <code>callback</code>.</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -40,19 +42,21 @@ module.exports = function(callback) {
 </div>	
 <pre><code class="hljs javascript">
 module.exports = function(context, callback) {
-	callback(null, { hello: context.data.name || 'Anonymous' });
+	callback(null, { hello: context.data.name });
 }
 </code></pre><br />
 
 <p>The <code>context</code> parameter is a JavaScript object with the following properties:</p>
 
-<p>The <code>data</code> is a JavaScript object that combines parameters passed to the code via GET.</p>
+<p>The <code>context.data</code> is a JavaScript object that combines parameters passed to the code via GET or POST.</p>
 
-<p>The <code>env</code> is a JavaScript object that passes an object containing your <a href="/docs/env/">encrypted parameters</a>.</p>
+<p>The <code>context.env</code> is a JavaScript object that passes an object containing your <a href="/docs/env/">encrypted parameters</a>.</p>
 
-<p>The <code>method</code> is a JavaScript variable that tells you what method was used, GET or POST.</p>
+<p>The <code>context.method</code> is a JavaScript variable that tells you what method was used: GET or POST.</p>
 
 <p>The <code>context.body</code> is JavaScript representation of a parsed <code>application/json</code> or <code>application/x-www-form-urlencoded</code> request body. It is only present for requests with bodies such as a POST.</p>
+
+<hr />
 
 <h3>Total HTTP control</h3>
 
