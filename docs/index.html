@@ -20,12 +20,6 @@ subtitle2: Developer Docs
 
 <p>Once you've signed up, let's create a recipe called <code>hello world</code>:</p>
 
-<div class="window-toolbar">
-	<i class="fa fa-circle red"></i>
-	<i class="fa fa-circle orange"></i>
-	<i class="fa fa-circle green"></i>
-	<span>hello.js</span>
-</div>	
 <pre><code class="hljs javascript">
 module.exports = function(context, callback) { 
 	callback(null, {message: "Hello " + context.data.who + '!' }); 
@@ -36,9 +30,9 @@ module.exports = function(context, callback) {
 
 <p>This will create a unique URL, which is based on your unique <em>container</em> and <em>recipe</em>, so you would see a URL similar to this:
 
-<p><code>
+<pre><code class="hljs javascript">
 https://api.joinednode.com/run/black-surf-17638/polished-firefly-55389
-</code></p>
+</code></pre><br />
 
 <p>Then, you would call it with: <code>https://api.joinednode.com/run/black-surf-17638/polished-firefly-55389?who=me</code> via curl, or from a web request, which would return a JSON result with <code>message</code> that says hello to the name you passed as <code>who</code>.</p>
 

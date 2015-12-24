@@ -8,12 +8,6 @@ permalink: /docs/parameters/
 ---
 <p>You can pass parameters to your code using a query string such as <code>?who=myself</code>. All URL query parameters will be passed to the recipe when it runs.</p>
 
-<div class="window-toolbar">
-	<i class="fa fa-circle red"></i>
-	<i class="fa fa-circle orange"></i>
-	<i class="fa fa-circle green"></i>
-	<span>hello.js</span>
-</div>	
 <pre><code class="hljs javascript">
 module.exports = function(context, callback) { 
 	callback(null, {message: "Good morning " + context.data.who + '!' }); 
