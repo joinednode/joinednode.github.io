@@ -1,14 +1,12 @@
 ---
 layout: docs
-title: "Query String parameters - Developer Docs"
-subheader: Query String Parameters
-subtitle: Query String Parameters
+title: "Passing Parameters via URL Query String - Developer Docs"
+subheader: Passing Parameters via URL Query String
+subtitle: Passing Parameters via URL Query String
 subtitle2: Developer Docs
 permalink: /docs/parameters/
 ---
-<p>You can pass parameters to your code using URL query string of the request. All URL query parameters will be propagated to the recipe when it runs.</p>
-
-<p>To take advantage of this feature, define your JavaScript function such that it accepts two arguments instead of one: the <code>context</code> and the <code>callback</code>:</p>
+<p>You can pass parameters to your code using a query string such as <code>?who=myself</code>. All URL query parameters will be passed to the recipe when it runs.</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -22,8 +20,6 @@ module.exports = function(context, callback) {
 }
 </code></pre>
 <br />
-<p>Passing <code>?who=me</code> in your URL will add a variable called <code>who</code> to your <code>context.data</code> object and will be accessible to your Recipe.</p>
-
-<p>All allowed URL query parameters of the request will be provided to the code in the form of <code>context.data</code> JavaScript object.</p>
+<p>Passing <code>?who=me</code> in your URL will add a parameter called <code>who</code> to your <code>context.data</code> object and will be accessible to your recipe.</p>
 
 <p><code>context.data</code> will also work on POST requests.</p>

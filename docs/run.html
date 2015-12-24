@@ -7,7 +7,7 @@ subtitle2: Developer Docs
 permalink: /docs/run/
 ---
 
-<p>The Joined Node recipe request endpoint has been set up to be flexible and to execute code in the Joined Node cluster:</p>
+<p>We've developed the Joined Node <code>/run</code> endpoint to be flexible and to execute code in the Joined Node cluster:</p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -23,9 +23,10 @@ HTTPS {verb} https://api.joinednode.com/run/{unique-container}/{recipe-id}
 <ol>
 	<li>The <code>{unique-container}</code> URL segment identifies the name of the container to execute the request in. This container is unique and linked only to your account.</li>
 	<li>The <code>{recipe-id}</code> URL segment identifies the unique id of the recipe to execute. These recipes are added via the Joined Node Dashboard, and are associated with a single container.</li>
-	<li>The <code>{verb}</code> must be POST, PATCH, PUT, or GET.</li>
+	<li>The <code>{verb}</code> must be GET, POST, PATCH, or PUT.</li>
 </ol>
 </p>
+{% comment %}
 <div class="well">
 	<h4>Now you Know...</h4>
 	<p>The Joined Node recipe cluster may cache the recipe code obtained to reduce the latency of consecutive recipe requests.</p>
@@ -46,3 +47,4 @@ HTTPS {verb} https://api.joinednode.com/run/{unique-container}/{recipe-id}
 	<li><strong>500</strong>: Fatal execution error of the recipe, the response contains details.</li>
 </ul>
 </p>
+{% endcomment %}
