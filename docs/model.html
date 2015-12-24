@@ -22,7 +22,7 @@ permalink: /docs/model/
 </div>	
 <pre><code class="hljs javascript">
 module.exports = function(callback) {
-	callback(null, { i_am: 'done '});
+	callback(null, { hello: 'callback'});
 }
 </code></pre><br />
 
@@ -48,19 +48,26 @@ module.exports = function(context, callback) {
 
 <p>The <code>context</code> parameter is a JavaScript object with the following properties:</p>
 
-<p>The <code>context.data</code> is a JavaScript object that combines parameters passed to the code via GET or POST.</p>
-
-<p>The <code>context.env</code> is a JavaScript object that passes an object containing your <a href="/docs/env/">encrypted parameters</a>.</p>
-
-<p>The <code>context.method</code> is a JavaScript variable that tells you what method was used: GET or POST.</p>
-
-<p>The <code>context.body</code> is JavaScript representation of a parsed <code>application/json</code> or <code>application/x-www-form-urlencoded</code> request body. It is only present for requests with bodies such as a POST.</p>
+<p><ol>
+	<li><code>context.data</code> is an object that contains parameters passed to the code via <code>GET</code> or <code>POST</code>.</li>
+	<li><code>context.env</code> is a object that contains any <a href="/docs/env/">encrypted parameters</a> you've added for this recipe.</li>
+	<li><code>context.method</code> is a string variable that tells you what method was used: <code>GET</code> or <code>POST</code>.</li>
+	<l><code>context.body</code> is representation of a parsed request body. It is only present for requests with bodies such as a <code>POST</code>.</l>
+</ol></p>
 
 <hr />
 
 <h3>Total HTTP control</h3>
 
-<p>The most flexible programming model allows you to take full control over the HTTP request and response.</p>
+<p>This model is the most flexible programming model which allows you to take full control over the HTTP request and response.</p>
+
+<p>Using this model, you pass three arguments:</p>
+
+<p><ol>
+	<li><code>context</code>: works the same as above</li>
+	<li><code>req</code>: HTTP request object</li>
+	<li><code>res</code>: HTTP response object</li>
+</ol></p>
 
 <div class="window-toolbar">
 	<i class="fa fa-circle red"></i>
@@ -75,8 +82,11 @@ module.exports = function (context, req, res) {
 }
 </code></pre><br />
 
-<p>The <code>context</code> argument behaves the same way as in the two simpler programming models. Note that this programming model does not have a concept of a callback. Ending the HTTP response indicates completion.</p>
+<p>One thing to keep in mind is that this programming model does not use a callback, and so ending the HTTP response indicates the recipe has finished.</p>
 
-<p>In all three models, The order of the variables is <strong>very</strong> important.</p>
+<hr />
+<div class="well">
+	<p>In all three models, the order of the argumentss is <strong>very</strong> important</p>
+</div>
 
 <p>Our programming model allows for flexibility in building your Joined Node recipes while also sticking to a set model, this helps keep apps streamlined.</p>

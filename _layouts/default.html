@@ -51,13 +51,13 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/docs/features">Overview</a></li>
 						<li><a href="/docs">Docs</a></li>
 						<li><a href="/pricing">Pricing</a></li>
 						<li><a class="bloglink" href="http://blog.joinednode.com" title="The Joined Node Blog">Blog</a></li>
 						<li><a href="https://app.joinednode.com/login" class="btn btn-primary">Login</a></li>
 						<li><a href="https://app.joinednode.com/signup" class="btn btn-default">Signup</a></li>
 {% comment %}			<li>
+						<li><a href="/docs/features">Overview</a></li>
 							<a href="#">Dropdown</a>
 							<ul>
 								<li><a href="#">Lorem ipsum dolor</a></li>
@@ -90,7 +90,9 @@
 		<!-- Footer Wrapper -->
 		<div id="footer-wrapper">
 			<div id="footer" class="container">
+{% comment %}
 				<div class="title"><span>Find Us Online</span></div>
+{% endcomment %}
 				<div class="row">
 					<section class="8u 12u(narrower)">
 						<ul class="icons">
@@ -117,7 +119,7 @@
 		</div>
 		<!-- Copyright -->
 		<div id="copyright">
-			&copy; {{ site.time | date: '%Y' }}, Joined Node is a <a href="http://flybase.io">Flybase</a> production.
+			&copy; {{ site.time | date: '%Y' }}, Joined Node by <a href="http://flybase.io">Flybase</a> <small style="font-size:12px;">(1059105 B.C. LTD)</small>.
 		</div>
 	</div>
 
