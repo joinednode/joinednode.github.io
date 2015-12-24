@@ -22,3 +22,26 @@ permalink: /docs/auth/
 	<li>Tokens can be presented with the <code>Authorization: Bearer {token}</code> HTTP request header.</li>
 	<li>Tokens can also be presented with the <code>token={token}</code> URL query parameter</li>
 </ol></p>
+
+<hr />
+<h3>Creating Tokens</h3>
+
+<p>To issue a new token, you just have to make a call to the Joined Node token request endpoint.</p>
+
+<p>Tokens are linked to the <code>container-id</code> you specify when you create a token, and can not be used with any other containers</p>
+
+<div class="window-toolbar">
+	<i class="fa fa-circle red"></i>
+	<i class="fa fa-circle orange"></i>
+	<i class="fa fa-circle green"></i>
+	<span>token.js</span>
+</div>	
+<pre><code class="hljs javascript">
+HTTPS POST https://api.joinednode.com/create-token/&lt;your-container-id>
+Content-Type: application/json 
+</code></pre>
+<br />
+
+<p>The request must be <a href="/docs/auth">authenticated</a> by specifying the token as the <code>token</code> URL query parameter or with the <code>Authorization</code> HTTP request header.</p>
+
+<p>Tokens are only required on recipes that are set to <code>Private</code> but can be used on <code>Public</code> recipes as well.</p>
